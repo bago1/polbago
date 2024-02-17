@@ -13,6 +13,7 @@ client = MongoClient(uri)
 db = client['lang']  # Use your actual database name
 verbs_collection = db['verbs']
 
+
 @app.route('/')
 def index():
     verbs = list(verbs_collection.find({}))
@@ -20,22 +21,38 @@ def index():
         curVerb = random.choice(verbs)
         # Convert ObjectId to string
         curVerb['_id'] = str(curVerb['_id'])
-        session['current_verb'] = curVerb
-        question = f"Type the Polish form of the following English verb: {curVerb['infinitive_eng']}"
-        return render_template('random_verb.html', verb=curVerb['infinitive_eng'], feedback=session.get('feedback', ''),
-                               score=session.get('score', 0), question=question, verbs=verbs)
+        # Select a random conjugation for the current verb
+        randomConjugation = random.choice(curVerb['conjugations'])
+
+        # Store necessary information in session for validation in /submit
+        session['current_verb'] = {
+            'infinitive_eng': curVerb['infinitive_eng'],
+            'conjugation_pol': randomConjugation['conjugation_pol']  # Store correct Polish form for answer validation
+        }
+
+        # Generate question using the English pronoun and conjugation
+        # question = f"Type the Polish form of '{randomConjugation['pronoun_eng']} {curVerb['infinitive_eng']}'"
+        # Generate question using the English pronoun and conjugation
+        question = f"Type the Polish form of '{randomConjugation['pronoun_eng']} {randomConjugation['conjugation_eng']}'"
+
+        # return render_template('random_verb.html', verb=curVerb['infinitive_eng'], feedback=session.get('feedback', ''),
+        #                        score=session.get('score', 0), question=question, verbs=verbs)
+        return render_template('random_verb.html', feedback=session.get('feedback', ''),
+                           score=session.get('score', 0), question=question, verbs=verbs)
+
     else:
-        return render_template('random_verb.html', feedback="No verbs found in the database. Please upload a file to add verbs.")
+        return render_template('random_verb.html',
+                               feedback="No verbs found in the database. Please upload a file to add verbs.")
+
 
 @app.route('/submit', methods=['POST'])
 def submit_answer():
-    curVerb = session.get('current_verb')
-    if not curVerb:
+    if 'current_verb' not in session or not session['current_verb']:
         session['feedback'] = "There was an error with the current question. Please try again."
         return redirect(url_for('index'))
 
     user_answer = request.form['answer'].strip()
-    correct_answer = curVerb['conjugation_pol']  # Ensure your documents have this field or adjust accordingly
+    correct_answer = session['current_verb']['conjugation_pol']
 
     if user_answer.lower() == correct_answer.lower():
         session['feedback'] = "Correct!"
@@ -49,22 +66,3 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-#
-# @app.route('/upload', methods=['GET', 'POST'])
-# def upload_file():
-#     if request.method == 'POST':
-#         file = request.files.get('file')
-#         if file and file.filename.endswith('.xlsx'):
-#             filename = secure_filename(file.filename)
-#             filepath = os.path.join('temporary_directory', filename)
-#             os.makedirs('temporary_directory', exist_ok=True)
-#             file.save(filepath)
-#             process_excel_file(filepath)
-#             session['feedback'] = "File uploaded successfully!"
-#             return redirect(url_for('index'))
-#     return render_template('upload.html')
-#
-# def process_excel_file(filepath):
-#     df = pd.read_excel(filepath)
-#     # Processing Excel file logic here, potentially adding verbs to MongoDB
-#     # Example: verbs_collection.insert_one({})
