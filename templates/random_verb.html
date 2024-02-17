@@ -82,26 +82,20 @@
     </head>
     <body>
     <h1>Welcome to the Verb Quiz!</h1>
-{% if verbs %}
-    <ul>
-        {% for verb in verbs %}
-            <li>{{ verb.infinitive }} - {{ verb.english_1 }} - {{ verb.polish_1 }}</li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No verbs found in the database. Please upload a file to add verbs.</p>
-{% endif %}
 
-    <h1>{{ question }}</h1>
+
+
     {% if feedback %}
     <p class="feedback"><strong>{{ feedback }}</strong></p>
     {% endif %}
     <p>Score: {{ score }}</p>
-    <form method="POST">
-        <label for="answer">Type the Polish form:</label>
-        <input type="text" id="answer" name="answer" required autofocus>
-        <button type="submit">Submit</button>
-    </form>
+<form method="POST" action="{{ url_for('submit_answer') }}">
+    <label for="answer">Type the Polish form: {{ verb }} </label>
+
+    <input type="text" id="answer" name="answer" required autofocus>
+    <button type="submit">Submit</button>
+</form>
+
     <a href="/">Next Question</a>
     <h1>Upload a new Excel File with Verbs</h1>
     <form action="/upload" method="post" enctype="multipart/form-data" class="file-input-container">
