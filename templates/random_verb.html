@@ -70,6 +70,12 @@
     </style>
 </head>
 <body>
+   <h1>Welcome to the Verb Quiz!</h1>
+    <ul>
+        {% for verb in verbs %}
+            <li>{{ verb.infinitive }} - {{ verb.english_1 }} - {{ verb.polish_1 }}</li>
+        {% endfor %}
+    </ul>
     <h1>{{ question }}</h1>
     {% if feedback %}
         <p class="feedback"><strong>{{ feedback }}</strong></p>
