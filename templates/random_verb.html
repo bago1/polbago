@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verb Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: calc(100% - 122px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"], button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #4cae4c;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #f0ad4e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        a:hover {
+            background-color: #ec971f;
+        }
+        .feedback {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ question }}</h1>
+    {% if feedback %}
+        <p class="feedback"><strong>{{ feedback }}</strong></p>
+    {% endif %}
+    <p>Score: {{ score }}</p>
+    <form method="POST">
+        <input type="text" name="answer" required autofocus>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Next Question</a>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">Upload file:</label>
+        <input type="file" name="file" id="file" required>
+        <input type="submit" value="Upload">
+    </form>
+
+</body>
+</html>
