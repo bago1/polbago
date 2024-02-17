@@ -14,18 +14,21 @@ verbs_collection = db['verbs']
 
 @app.route('/')
 def index():
-    verbs = list(verbs_collection.find({}))
+    used_verb_ids = session.get('used_verb_ids', [])
+    print("used_verb_ids size: ", len(used_verb_ids))
+    verbs = list(verbs_collection.find({'_id': {'$nin': used_verb_ids}}))
     if verbs:
-        curVerb = random.choice(verbs)
-        curVerb['_id'] = str(curVerb['_id'])
-        randomConjugation = random.choice(curVerb['conjugations'])
+        cur_verb = random.choice(verbs)
+        cur_verb['_id'] = str(cur_verb['_id'])  # Ensure '_id' is set as a string
+        random_conjugation = random.choice(cur_verb['conjugations'])
 
         session['current_verb'] = {
-            'infinitive_eng': curVerb['infinitive_eng'],
-            'conjugation_pol': randomConjugation['conjugation_pol']  # Store correct Polish form for answer validation
+            '_id': cur_verb['_id'],  # Ensure '_id' is set in the session
+            'infinitive_eng': cur_verb['infinitive_eng'],
+            'conjugation_pol': random_conjugation['conjugation_pol']  # Store correct Polish form for answer validation
         }
 
-        question = f"Type the Polish form of '{randomConjugation['pronoun_eng']} {randomConjugation['conjugation_eng']}'"
+        question = f"Type the Polish form of '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
 
         return render_template('random_verb.html', feedback=session.get('feedback', ''),
                                score=session.get('score', 0), question=question, verbs=verbs)
@@ -47,6 +50,9 @@ def submit_answer():
     if user_answer.lower() == correct_answer.lower():
         session['feedback'] = "Correct!"
         session['score'] = session.get('score', 0) + 1
+        used_verb_ids = session.get('used_verb_ids', [])
+        used_verb_ids.append(session['current_verb']['_id'])
+        session['used_verb_ids'] = used_verb_ids
     else:
         session['feedback'] = f"Incorrect. The correct answer is {correct_answer}."
 
