@@ -16,6 +16,8 @@ with app.app_context():
 @app.route('/')
 def index():
     all_verbs = fetch_all_verbs()
+    print( "all verbs")  # Add this before returning the render_template call
+    print( all_verbs)  # Add this before returning the render_template call
 
     if 'score' not in session:
         session['score'] = 0
@@ -74,5 +76,7 @@ def fetch_all_verbs():
     cursor = db.execute('SELECT * FROM verbs')
     verbs = cursor.fetchall()
     return verbs
+
+
 if __name__ == '__main__':
     app.run(debug=True)

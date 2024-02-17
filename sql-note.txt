@@ -1,0 +1,6 @@
+sqlite3 verbs.db
+SQLite version 3.37.2 2022-01-06 13:25:41
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM verbs;
+sqlite> INSERT INTO verbs (infinitive, english_1, polish_1, english_2, polish_2, english_3, polish_3, english_4, polish_4, english_5, polish_5, english_6, polish_6) VALUES ('mówić', 'I speak', 'mówię', 'You speak', 'mówisz', 'He/She/It speaks', 'mówi', 'We speak', 'mówimy', 'You (plural) speak', 'mówicie', 'They speak', 'mówią');
+sqlite> SELECT * FROM verbs;
