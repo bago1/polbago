@@ -3,6 +3,8 @@ from werkzeug.utils import secure_filename
 import sqlite3
 import pandas as pd
 import os
+import random  # Add this import statement
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -34,7 +36,15 @@ def teardown_db(exception):
 @app.route('/')
 def index():
     all_verbs = fetch_all_verbs()
-    return render_template('random_verb.html', verbs=all_verbs, feedback=session.get('feedback', ''), score=session.get('score', 0))
+    print("All verbs: ")
+    print(all_verbs)
+    session['question'] = "Type the Polish form of the following English verb:"
+
+    if all_verbs:
+        session['current_verb'] = random.choice(all_verbs)
+        return render_template('random_verb.html', verb=session['current_verb'], feedback=session.get('feedback', ''), score=session.get('score', 0), question=session.get('question', ''), verbs=all_verbs)
+    else:
+        return render_template('random_verb.html', feedback="No verbs found in the database. Please upload a file to add verbs.")
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -67,10 +77,21 @@ def process_excel_file(filepath):
                     row.get('English_5', ''), row.get('Polish_5', ''), row.get('English_6', ''), row.get('Polish_6', '')))
     db.commit()
 
+@app.route('/submit', methods=['POST'])
+def submit_answer():
+    user_answer = request.form['answer']
+    correct_answer = session.get('current_verb')['polish_1']  # Assuming Polish translation is stored in 'polish_1' column
+    if user_answer.lower() == correct_answer.lower():
+        session['feedback'] = "Correct!"
+        session['score'] += 1
+    else:
+        session['feedback'] = f"Incorrect. The correct answer is {correct_answer}."
+    return redirect(url_for('index'))
+
 def fetch_all_verbs():
     db = get_db()
     cursor = db.execute('SELECT * FROM verbs')
-    verbs = cursor.fetchall()
+    verbs = [dict(row) for row in cursor.fetchall()]
     return verbs
 
 if __name__ == '__main__':
