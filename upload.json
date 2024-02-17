@@ -1,0 +1,67 @@
+[
+  {
+    "infinitive_eng": "to include",
+    "infinitive_pol": "obejmować",
+    "conjugations": [
+      {"pronoun_eng": "I", "pronoun_pol": "Ja", "conjugation_eng": "include", "conjugation_pol": "obejmuję"},
+      {"pronoun_eng": "You", "pronoun_pol": "Ty", "conjugation_eng": "include", "conjugation_pol": "obejmujesz"},
+      {"pronoun_eng": "He/It", "pronoun_pol": "On/Ono", "conjugation_eng": "includes", "conjugation_pol": "obejmuje"},
+      {"pronoun_eng": "She", "pronoun_pol": "Ona", "conjugation_eng": "includes", "conjugation_pol": "obejmuje"},
+      {"pronoun_eng": "We", "pronoun_pol": "My", "conjugation_eng": "include", "conjugation_pol": "obejmujemy"},
+      {"pronoun_eng": "You (plural)", "pronoun_pol": "Wy", "conjugation_eng": "include", "conjugation_pol": "obejmujecie"},
+      {"pronoun_eng": "They", "pronoun_pol": "Oni/One", "conjugation_eng": "include", "conjugation_pol": "obejmują"}
+    ]
+  },
+  {
+    "infinitive_eng": "to continue",
+    "infinitive_pol": "kontynuować",
+    "conjugations": [
+      {"pronoun_eng": "I", "pronoun_pol": "Ja", "conjugation_eng": "continue", "conjugation_pol": "kontynuuję"},
+      {"pronoun_eng": "You", "pronoun_pol": "Ty", "conjugation_eng": "continue", "conjugation_pol": "kontynuujesz"},
+      {"pronoun_eng": "He/It", "pronoun_pol": "On/Ono", "conjugation_eng": "continues", "conjugation_pol": "kontynuuje"},
+      {"pronoun_eng": "She", "pronoun_pol": "Ona", "conjugation_eng": "continues", "conjugation_pol": "kontynuuje"},
+      {"pronoun_eng": "We", "pronoun_pol": "My", "conjugation_eng": "continue", "conjugation_pol": "kontynuujemy"},
+      {"pronoun_eng": "You (plural)", "pronoun_pol": "Wy", "conjugation_eng": "continue", "conjugation_pol": "kontynuujecie"},
+      {"pronoun_eng": "They", "pronoun_pol": "Oni/One", "conjugation_eng": "continue", "conjugation_pol": "kontynuują"}
+    ]
+  },
+  {
+    "infinitive_eng": "to set",
+    "infinitive_pol": "ustawić",
+    "conjugations": [
+      {"pronoun_eng": "I", "pronoun_pol": "Ja", "conjugation_eng": "set", "conjugation_pol": "ustawiam"},
+      {"pronoun_eng": "You", "pronoun_pol": "Ty", "conjugation_eng": "set", "conjugation_pol": "ustawiasz"},
+      {"pronoun_eng": "He/It", "pronoun_pol": "On/Ono", "conjugation_eng": "sets", "conjugation_pol": "ustawia"},
+      {"pronoun_eng": "She", "pronoun_pol": "Ona", "conjugation_eng": "sets", "conjugation_pol": "ustawia"},
+      {"pronoun_eng": "We", "pronoun_pol": "My", "conjugation_eng": "set", "conjugation_pol": "ustawiamy"},
+      {"pronoun_eng": "You (plural)", "pronoun_pol": "Wy", "conjugation_eng": "set", "conjugation_pol": "ustawiacie"},
+      {"pronoun_eng": "They", "pronoun_pol": "Oni/One", "conjugation_eng": "set", "conjugation_pol": "ustawiają"}
+    ]
+  },
+  {
+    "infinitive_eng": "to learn",
+    "infinitive_pol": "uczyć się",
+    "conjugations": [
+      {"pronoun_eng": "I", "pronoun_pol": "Ja", "conjugation_eng": "learn", "conjugation_pol": "uczę się"},
+      {"pronoun_eng": "You", "pronoun_pol": "Ty", "conjugation_eng": "learn", "conjugation_pol": "uczysz się"},
+      {"pronoun_eng": "He/It", "pronoun_pol": "On/Ono", "conjugation_eng": "learns", "conjugation_pol": "uczy się"},
+      {"pronoun_eng": "She", "pronoun_pol": "Ona", "conjugation_eng": "learns", "conjugation_pol": "uczy się"},
+      {"pronoun_eng": "We", "pronoun_pol": "My", "conjugation_eng": "learn", "conjugation_pol": "uczmy się"},
+      {"pronoun_eng": "You (plural)", "pronoun_pol": "Wy", "conjugation_eng": "learn", "conjugation_pol": "uczycie się"},
+      {"pronoun_eng": "They", "pronoun_pol": "Oni/One", "conjugation_eng": "learn", "conjugation_pol": "uczą się"}
+    ]
+  },
+  {
+    "infinitive_eng": "to change",
+    "infinitive_pol": "zmieniać",
+    "conjugations": [
+      {"pronoun_eng": "I", "pronoun_pol": "Ja", "conjugation_eng": "change", "conjugation_pol": "zmieniam"},
+      {"pronoun_eng": "You", "pronoun_pol": "Ty", "conjugation_eng": "change", "conjugation_pol": "zmieniasz"},
+      {"pronoun_eng": "He/It", "pronoun_pol": "On/Ono", "conjugation_eng": "changes", "conjugation_pol": "zmienia"},
+      {"pronoun_eng": "She", "pronoun_pol": "Ona", "conjugation_eng": "changes", "conjugation_pol": "zmienia"},
+      {"pronoun_eng": "We", "pronoun_pol": "My", "conjugation_eng": "change", "conjugation_pol": "zmieniamy"},
+      {"pronoun_eng": "You (plural)", "pronoun_pol": "Wy", "conjugation_eng": "change", "conjugation_pol": "zmieniacie"},
+      {"pronoun_eng": "They", "pronoun_pol": "Oni/One", "conjugation_eng": "change", "conjugation_pol": "zmieniają"}
+    ]
+  }
+]
