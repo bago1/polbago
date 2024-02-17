@@ -1,103 +1,96 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Verb Quiz</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0 auto;
-                max-width: 600px;
-                padding: 20px;
-                background-color: #f4f4f4;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verb Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
 
-            h1 {
-                color: #333;
-            }
+        h1 {
+            color: #333;
+        }
 
-            p {
-                font-size: 18px;
-            }
+        p {
+            font-size: 18px;
+        }
 
-            form {
-                margin-bottom: 20px;
-            }
+        form {
+            margin-bottom: 20px;
+        }
 
-            input[type="text"] {
-                padding: 10px;
-                margin-right: 10px;
-                width: calc(100% - 122px);
-                border: 1px solid #ddd;
-                border-radius: 5px;
-            }
+        input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: calc(100% - 122px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-            input[type="submit"], button {
-                cursor: pointer;
-                padding: 10px 20px;
-                background-color: #5cb85c;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                font-size: 16px;
-            }
+        input[type="submit"], button, a {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-            input[type="submit"]:hover, button:hover {
-                background-color: #4cae4c;
-            }
+        input[type="submit"]:hover, button:hover, a:hover {
+            background-color: #4cae4c;
+        }
 
-            label {
-                display: block;
-                margin-top: 20px;
-            }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
 
-            input[type="file"] {
-                margin-top: 10px;
-            }
+        input[type="file"] {
+            margin-top: 10px;
+        }
 
-            a {
-                display: inline-block;
-                margin-top: 20px;
-                text-decoration: none;
-                background-color: #f0ad4e;
-                color: white;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 16px;
-            }
+        .feedback {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to the Verb Quiz!</h1>
 
-            a:hover {
-                background-color: #ec971f;
-            }
-
-            .feedback {
-                margin: 20px 0;
-                padding: 10px;
-                background-color: #dff0d8;
-                color: #3c763d;
-                border: 1px solid #d6e9c6;
-                border-radius: 5px;
-            }
-        </style>
-    </head>
-    <body>
-    <h1>Welcome to the Verb Quiz!</h1>
-
-
-
-    {% if feedback %}
-    <p class="feedback"><strong>{{ feedback }}</strong></p>
-    {% endif %}
-    <p>Score: {{ score }}</p>
+{% if feedback %}
+<p class="feedback"><strong>{{ feedback }}</strong></p>
+{% endif %}
+<p>Score: {{ score }}</p>
 <form method="POST" action="{{ url_for('submit_answer') }}">
     <label for="answer">{{ question }}</label>
     <input type="text" id="answer" name="answer" required autofocus>
     <button type="submit">Submit</button>
 </form>
 
+<form method="POST" action="{{ url_for('clear_results') }}">
+    <button type="submit">Clear Results</button>
+</form>
 
-    <a href="/">Next Question</a>
+<form method="POST" action="{{ url_for('clear_cache') }}">
+    <button type="submit">Clear Cache</button>
+</form>
 
+<a href="/">Next Question</a>
 
-    </body>
-    </html>
+</body>
+</html>
