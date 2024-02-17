@@ -16,6 +16,8 @@ used_verb_ids = []
 
 @app.route('/')
 def index():
+    data = load_data()
+    print("\nlen of data", len(data))
     global used_verb_ids
     print("used_verb_ids size: ", len(used_verb_ids))
     verbs = list(verbs_collection.find({'_id': {'$nin': used_verb_ids}}))
@@ -70,6 +72,5 @@ def clear_cache():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    file_path = 'upload.json'
-    load_data(file_path)
+    load_data()
     app.run(debug=True)
