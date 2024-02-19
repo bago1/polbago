@@ -25,10 +25,11 @@ def index():
         cur_verb = random.choice(verbs)
         cur_verb['_id'] = str(cur_verb['_id'])
         random_conjugation = random.choice(cur_verb['conjugations'])
-
+        print("infinitive_pol: ", cur_verb['infinitive_pol'])
         session['current_verb'] = {
             '_id': cur_verb['_id'],
             'infinitive_eng': cur_verb['infinitive_eng'],
+            'infinitive_pol': cur_verb['infinitive_pol'],  # Ensure this line is present
             'conjugation_pol': random_conjugation['conjugation_pol']
         }
 
@@ -36,10 +37,6 @@ def index():
 
         return render_template('random_verb.html', feedback=session.get('feedback', ''),
                                score=session.get('score', 0), question=question, verbs=verbs)
-
-    else:
-        return render_template('random_verb.html',
-                               feedback="No verbs found in the database. Please upload a file to add verbs.")
 
 @app.route('/submit', methods=['POST'])
 def submit_answer():

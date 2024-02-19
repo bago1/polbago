@@ -62,10 +62,20 @@
         .feedback {
             margin: 20px 0;
             padding: 10px;
-            background-color: #dff0d8;
-            color: #3c763d;
+            background-color: #dff0d8; /* Default green background */
+            color: #3c763d; /* Default green text */
             border: 1px solid #d6e9c6;
             border-radius: 5px;
+        }
+
+        .feedback.incorrect {
+            background-color: #f2dede; /* Red background for incorrect answers */
+            color: #a94442; /* Red text for incorrect answers */
+            border: 1px solid #ebccd1;
+        }
+
+           .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -73,9 +83,17 @@
 <h1>Welcome to the Verb Quiz!</h1>
 
 {% if feedback %}
-<p class="feedback"><strong>{{ feedback }}</strong></p>
+    {% if "Incorrect" in feedback %}
+        <p class="feedback incorrect"><strong>{{ feedback }}</strong></p>
+    {% else %}
+        <p class="feedback"><strong>{{ feedback }}</strong></p>
+    {% endif %}
 {% endif %}
+
 <p>Score: {{ score }}</p>
+ <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>
+ <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>
+
 <form method="POST" action="{{ url_for('submit_answer') }}">
     <label for="answer">{{ question }}</label>
     <input type="text" id="answer" name="answer" required autofocus>
@@ -86,11 +104,22 @@
     <button type="submit">Clear Results</button>
 </form>
 
-<form method="POST" action="{{ url_for('clear_cache') }}">
-    <button type="submit">Clear Cache</button>
-</form>
+<!--<form method="POST" action="{{ url_for('clear_cache') }}">-->
+<!--    <button type="submit">Clear Cache</button>-->
+<!--</form>-->
 
 <a href="/">Next Question</a>
 
+
+<script>
+function toggleInfinitive() {
+    var x = document.getElementById("polishInfinitive");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
