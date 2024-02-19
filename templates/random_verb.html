@@ -90,12 +90,12 @@
     {% endif %}
 {% endif %}
 
-<p>Score: {{ score }}</p>
+<p style="font-size: 48px; margin-top: 20px;">Score: {{ score }}</p>
  <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>
  <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>
 
 <form method="POST" action="{{ url_for('submit_answer') }}">
-    <label for="answer">{{ question }}</label>
+    <label for="answer" style="font-size: 24px; margin-top: 20px;" >{{ question }}</label>
     <input type="text" id="answer" name="answer" required autofocus>
     <button type="submit">Submit</button>
 </form>
