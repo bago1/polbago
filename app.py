@@ -1,3 +1,4 @@
+import logging
 from flask import Flask, request, render_template, session, redirect, url_for
 from werkzeug.utils import secure_filename
 import os
@@ -8,6 +9,11 @@ import json
 from database import db
 from db import load_data
 from flask_cors import CORS
+logging.basicConfig(level=logging.DEBUG)
+def log_request_info():
+    app.logger.debug('Headers: %s', request.headers)
+    app.logger.debug('Body: %s', request.get_data())
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -69,8 +75,13 @@ def clear_cache():
     cached_data = None
     return redirect(url_for('index'))
 
+@app.after_request
+def log_response_info(response):
+    app.logger.debug('Response status: %s', response.status)
+    return response
+
+
 if __name__ == '__main__':
     CORS(app)
     load_data()
     app.run(host='0.0.0.0', port=5000)
-
