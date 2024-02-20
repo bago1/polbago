@@ -80,7 +80,8 @@
     </style>
 </head>
 <body>
-<h1>Welcome to the Verb Quiz!</h1>
+<!--<h1>Welcome to the Verb Quiz!</h1>-->
+<h1>Xoş gəlmi(ş?)siniz🇦🇿</h1>
 
 {% if feedback %}
     {% if "Incorrect" in feedback %}
@@ -91,24 +92,31 @@
 {% endif %}
 
 <p style="font-size: 48px; margin-top: 20px;">Score: {{ score }}</p>
- <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>
- <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>
+<!-- <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>-->
+ <button onclick="toggleInfinitive()">Məsdər formanı göstər</button>
+<!-- <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>-->
+ <p id="polishInfinitive" class="hidden">Polyak dilində məsdər: {{ session.current_verb.infinitive_pol }}</p>
 
 <form method="POST" action="{{ url_for('submit_answer') }}">
-    <label for="answer" style="font-size: 24px; margin-top: 20px;" >{{ question }}</label>
+    <label for="answer" style="font-size: 24px; margin-top: 20px;" > Bu sözün polyak dilində tələb olunan halını yaz: </label>
+<label for="answer" style="font-size: 24px; margin-top: 20px;" >  <strong>{{ question }}</strong></label>
+<!--    <label for="answer" style="font-size: 24px; margin-top: 20px;" >Type the Polish form of {{ question }}</label>-->
     <input type="text" id="answer" name="answer" required autofocus>
-    <button type="submit">Submit</button>
+<!--    <button type="submit">Submit</button>-->
+    <button type="submit">Yoxla</button>
 </form>
 
 <form method="POST" action="{{ url_for('clear_results') }}">
-    <button type="submit">Clear Results</button>
+<!--    <button type="submit">Clear Results</button>-->
+    <button type="submit">Nəticəni sıfırla</button>
 </form>
 
 <!--<form method="POST" action="{{ url_for('clear_cache') }}">-->
 <!--    <button type="submit">Clear Cache</button>-->
 <!--</form>-->
 
-<a href="/">Next Question</a>
+<!--<a href="/">Next Question</a>-->
+<a href="/">Növbəti</a>
 
 
 <script>

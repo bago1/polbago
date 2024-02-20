@@ -44,7 +44,8 @@ def index():
             'conjugation_pol': random_conjugation['conjugation_pol']
         }
 
-        question = f"Type the Polish form of '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
+        question = f" '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
+        # question = f"Type the Polish form of '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
 
         return render_template('random_verb.html', feedback=session.get('feedback', ''),
                                score=session.get('score', 0), question=question, verbs=verbs)
