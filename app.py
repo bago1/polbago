@@ -10,6 +10,8 @@ from database import db
 from db import load_data
 from flask_cors import CORS
 logging.basicConfig(level=logging.DEBUG)
+import daemon
+
 
 
 app = Flask(__name__)
@@ -80,9 +82,10 @@ def clear_cache():
 def log_response_info(response):
     app.logger.debug('Response status: %s', response.status)
     return response
+def run_app():
+    app.run(host='0.0.0.0', port=5000)
 
 
 if __name__ == '__main__':
-    CORS(app)
-    load_data()
-    app.run(host='0.0.0.0', port=5000)
+    with daemon.DaemonContext():
+        run_app()

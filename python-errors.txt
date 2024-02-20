@@ -1,0 +1,6 @@
+python3 -m venv venv
+source venv/bin/activate
+
+ pip install python-daemon
+bahmadov@bahmadov:~/projects/polbago$ pip list | grep python-daemon
+python-daemon          3.0.1
