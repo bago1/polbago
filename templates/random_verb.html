@@ -95,7 +95,7 @@
 <!-- <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>-->
  <button onclick="toggleInfinitive()">Məsdər formanı göstər</button>
 <!-- <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>-->
- <p id="polishInfinitive" class="hidden">Polyak dilində məsdər: {{ session.current_verb.infinitive_pol }}</p>
+<p id="polishInfinitive" class="hidden" style="font-size: 24px; margin-top: 20px;">Polyak dilində məsdər: <strong>{{ session.current_verb.infinitive_pol }}</strong></p>
 
 <form method="POST" action="{{ url_for('submit_answer') }}">
     <label for="answer" style="font-size: 24px; margin-top: 20px;" > Bu sözün polyak dilində tələb olunan halını yaz: </label>
