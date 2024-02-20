@@ -10,9 +10,6 @@ from database import db
 from db import load_data
 from flask_cors import CORS
 logging.basicConfig(level=logging.DEBUG)
-def log_request_info():
-    app.logger.debug('Headers: %s', request.headers)
-    app.logger.debug('Body: %s', request.get_data())
 
 
 app = Flask(__name__)
@@ -20,6 +17,10 @@ app.secret_key = 'your_secret_key'
 
 verbs_collection = db['verbs']
 used_verb_ids = []
+@app.before_request
+def log_request_info():
+    app.logger.debug('Headers: %s', request.headers)
+    app.logger.debug('Body: %s', request.get_data())
 
 @app.route('/')
 def index():
