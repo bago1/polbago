@@ -7,6 +7,7 @@ import pandas as pd
 import json
 from database import db
 from db import load_data
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -69,6 +70,7 @@ def clear_cache():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
+    CORS(app)
     load_data()
     app.run(host='0.0.0.0', port=5000)
 
