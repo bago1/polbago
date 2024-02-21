@@ -1,19 +1,29 @@
 import logging
-from flask import Flask, request, render_template, session, redirect, url_for
-from werkzeug.utils import secure_filename
 import os
 import random
-from pymongo import MongoClient
-import pandas as pd
-import json
+import daemon
+from flask import Flask, request, render_template, session, redirect, url_for
 from database import db
 from db import fetch_data_from_mongo
-from flask_cors import CORS
-logging.basicConfig(level=logging.DEBUG)
-import daemon
 from daemon import DaemonContext
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Set the path for the log file
+log_file_path = os.path.join(current_dir, 'logfile.log')
 
+# Configure the root logger
+logging.basicConfig(level=logging.DEBUG, filename=log_file_path, filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# Get the root logger
+logger = logging.getLogger()
+
+# Since Flask uses its own logger, attach the file handler to Flask's logger to capture its logs as well
+file_handler = logging.FileHandler(log_file_path)
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+app = Flask(__name__)
+app.logger.addHandler(file_handler)
+app.logger.setLevel(logging.DEBUG)
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -84,13 +94,15 @@ def clear_cache():
 def log_response_info(response):
     app.logger.debug('Response status: %s', response.status)
     return response
-def run_app():
-    app.run(host='0.0.0.0', port=5000)
 
+def run_app():
+    app.run(host='0.0.0.0', port=5000, use_reloader=False)
 
 if __name__ == '__main__':
-    with daemon.DaemonContext():
+    try:
         run_app()
+    except Exception as e:
+        logger.exception("Fatal error in main loop")
 
 # if __name__ == '__main__':
 #     CORS(app)
