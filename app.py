@@ -7,7 +7,7 @@ from pymongo import MongoClient
 import pandas as pd
 import json
 from database import db
-from db import load_data
+from db import fetch_data_from_mongo
 from flask_cors import CORS
 logging.basicConfig(level=logging.DEBUG)
 import daemon
@@ -27,7 +27,7 @@ def log_request_info():
 
 @app.route('/')
 def index():
-    data = load_data()
+    data = fetch_data_from_mongo()
     print("\nlen of data", len(data))
     global used_verb_ids
     print("used_verb_ids size: ", len(used_verb_ids))
