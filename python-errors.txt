@@ -4,3 +4,6 @@ source venv/bin/activate
  pip install python-daemon
 bahmadov@bahmadov:~/projects/polbago$ pip list | grep python-daemon
 python-daemon          3.0.1
+
+
+(venv) root@travel-boys:/home/projects/polbago# nohup python3 app.py &
