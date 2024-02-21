@@ -18,7 +18,7 @@ from daemon import DaemonContext
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-verbs_collection = db['verbs']
+verbs_collection = db['verbs2']
 used_verb_ids = []
 @app.before_request
 def log_request_info():
@@ -39,12 +39,12 @@ def index():
         print("infinitive_pol: ", cur_verb['infinitive_pol'])
         session['current_verb'] = {
             '_id': cur_verb['_id'],
-            'infinitive_eng': cur_verb['infinitive_eng'],
+            'infinitive_aze': cur_verb['infinitive_aze'],
             'infinitive_pol': cur_verb['infinitive_pol'],  # Ensure this line is present
             'conjugation_pol': random_conjugation['conjugation_pol']
         }
 
-        question = f" '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
+        question = f" '{random_conjugation['pronoun_aze']} {random_conjugation['conjugation_aze']}'"
         # question = f"Type the Polish form of '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
 
         return render_template('random_verb.html', feedback=session.get('feedback', ''),
@@ -91,3 +91,8 @@ def run_app():
 if __name__ == '__main__':
     with daemon.DaemonContext():
         run_app()
+
+# if __name__ == '__main__':
+#     CORS(app)
+#     load_data()
+#     app.run(host='0.0.0.0', port=5000)
