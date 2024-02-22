@@ -6,6 +6,7 @@ from flask import Flask, request, render_template, session, redirect, url_for
 from database import db
 from db import fetch_data_from_mongo
 from daemon import DaemonContext
+reports_collection = db.reports
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Set the path for the log file
@@ -99,6 +100,22 @@ def log_response_info(response):
 
 def run_app():
     app.run(host='0.0.0.0', port=5000, use_reloader=False)
+
+
+@app.route('/report_mistake', methods=['POST'])
+def report_mistake():
+    verb_id = request.form.get('verb_id')
+    description = request.form.get('description')
+
+    # Insert the report into the "reports" collection
+    reports_collection.insert_one({
+        'verb_id': verb_id,
+        'description': description
+    })
+
+    # Redirect to a new page or back to the quiz, etc.
+    return redirect(url_for('index'))  # Adjust as needed
+
 
 if __name__ == '__main__':
     try:
