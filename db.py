@@ -2,7 +2,7 @@ import json
 import logging
 from database import db
 
-verbs_collection = db['verbs2']
+verbs_collection = db['verbs3']
 cached_data = None
 
 # Configure logging
@@ -47,7 +47,7 @@ def upload_json_data(file_path):
     return cached_data
 
 if __name__ == "__main__":
-    file_path = 'upload2.json'
+    file_path = 'upload3.json'
     data = upload_json_data(file_path)
     insert_verbs(data)
 

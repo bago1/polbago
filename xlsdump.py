@@ -21,6 +21,7 @@ class ExcelToMongoDB:
                 "infinitive_eng": row["infinitive_eng"],
                 "infinitive_pol": row["infinitive_pol"],
                 "infinitive_aze": row["infinitive_aze"],
+                "infinite_pol_perfectiveness": row["infinite_pol_perfectiveness"],
                 "conjugations": []
             }
 
@@ -45,7 +46,7 @@ class ExcelToMongoDB:
 
     def save_to_json(self, json_data):
         # Save the JSON data to a file in the same directory
-        with open('upload2.json', 'w', encoding='utf-8') as f:
+        with open('upload3.json', 'w', encoding='utf-8') as f:
             json.dump(json_data, f, ensure_ascii=False, indent=4)
         print("Data saved to upload2.json successfully.")
 

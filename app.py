@@ -28,7 +28,7 @@ app.logger.setLevel(logging.DEBUG)
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-verbs_collection = db['verbs2']
+verbs_collection = db['verbs3']
 used_verb_ids = []
 @app.before_request
 def log_request_info():
@@ -42,8 +42,10 @@ def index():
     global used_verb_ids
     print("used_verb_ids size: ", len(used_verb_ids))
     verbs = list(verbs_collection.find({'_id': {'$nin': used_verb_ids}}))
+    imperfective_verbs = [verb for verb in verbs if verb.get('infinite_pol_perfectiveness') == 'imperfective']
+    print("imperfective_verbs : ", len(imperfective_verbs))
     if verbs:
-        cur_verb = random.choice(verbs)
+        cur_verb = random.choice(imperfective_verbs)
         cur_verb['_id'] = str(cur_verb['_id'])
         random_conjugation = random.choice(cur_verb['conjugations'])
         print("infinitive_pol: ", cur_verb['infinitive_pol'])
