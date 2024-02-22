@@ -93,9 +93,9 @@
 
 <p style="font-size: 48px; margin-top: 20px;">Score: {{ score }}</p>
 <!-- <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>-->
- <button onclick="toggleInfinitive()">Məsdər formanı göstər</button>
+<button onclick="toggleInfinitive()">Məsdər formanı göstər/gizlət</button>
 <!-- <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>-->
-<p id="polishInfinitive" class="hidden" style="font-size: 24px; margin-top: 20px;">Polyak dilində məsdər: <strong>{{ session.current_verb.infinitive_pol }}</strong></p>
+<p id="polishInfinitive" style="font-size: 24px; margin-top: 24px;">Polyak dilində məsdər: <strong>{{ session.current_verb.infinitive_pol }}</strong></p>
 
 <form method="POST" action="{{ url_for('submit_answer') }}">
     <label for="answer" style="font-size: 24px; margin-top: 20px;" > Bu sözün polyak dilində tələb olunan halını yaz: </label>
@@ -184,15 +184,26 @@ function closeForm() {
 </script>
 
 <script>
+// Check and set the initial state of polishInfinitive based on localStorage
+window.onload = function() {
+    var x = document.getElementById("polishInfinitive");
+    // Retrieve the stored state; default is 'block'
+    var displayState = localStorage.getItem('polishInfinitiveDisplay') || 'block';
+    x.style.display = displayState;
+};
+
 function toggleInfinitive() {
     var x = document.getElementById("polishInfinitive");
-    if (x.style.display === "none") {
+    if (x.style.display === "none" || x.style.display === "") {
         x.style.display = "block";
+        localStorage.setItem('polishInfinitiveDisplay', 'block');
     } else {
         x.style.display = "none";
+        localStorage.setItem('polishInfinitiveDisplay', 'none');
     }
 }
 </script>
+
 
  <footer style="padding: 20px; background-color: #333; color: white; text-align: center; margin-top: 40px;">
     <p style="margin: 0;">© 2024 By Bago. All Rights Reserved.</p>
