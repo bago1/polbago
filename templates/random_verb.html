@@ -162,6 +162,13 @@
             padding: 10px 20px; /* Larger padding for a bigger button */
         }
 
+        .verb-image img {
+            width: 200px; /* Set the width to your preference */
+            height: auto; /* This will maintain the aspect ratio */
+            display: block; /* Optional: use block to prevent inline default behavior */
+            margin: 10px auto; /* Center the image */
+        }
+
 
         .popup-form {
             display: none; /* Hidden by default */
@@ -245,7 +252,12 @@
     </div>
     {% endif %}
 
-
+    <!-- Display image if image_url exists -->
+    {% if image_url %}
+    <div class="verb-image">
+        <img src="{{ image_url }}" alt="Verb image">
+    </div>
+    {% endif %}
     <p style="font-size: 48px; margin-top: 20px;">Bal: {{ score }}</p>
     <button onclick="toggleInfinitive()" style="display: none;">Məsdər formanı göstər/gizlət</button>
 

@@ -22,8 +22,12 @@ class ExcelToMongoDB:
                 "infinitive_pol": row["infinitive_pol"],
                 "infinitive_aze": row["infinitive_aze"],
                 "infinite_pol_perfectiveness": row["infinite_pol_perfectiveness"],
-                "conjugations": []
+                "conjugations": [],
+                 "image_url": row.get("image_url", None)
+
             }
+
+
 
             # There are 7 conjugations based on your example. Adjust if your actual data differs.
             for i in range(7):

@@ -6,6 +6,7 @@ from flask import Flask, request, render_template, session, redirect, url_for
 from database import db
 from db import fetch_data_from_mongo
 from daemon import DaemonContext
+
 reports_collection = db.reports
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +14,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 log_file_path = os.path.join(current_dir, 'logfile.log')
 
 # Configure the root logger
-logging.basicConfig(level=logging.DEBUG, filename=log_file_path, filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, filename=log_file_path, filemode='a',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # Get the root logger
 logger = logging.getLogger()
@@ -31,6 +33,8 @@ app.secret_key = 'your_secret_key'
 
 verbs_collection = db['verbs3']
 used_verb_ids = []
+
+
 @app.before_request
 def log_request_info():
     app.logger.debug('Headers: %s', request.headers)
@@ -53,23 +57,22 @@ def index():
 
         options = find_matching_conjugations(imperfective_verbs, cur_verb['_id'], target_pronoun_eng, correct_option)
 
-
         session['current_verb'] = {
             '_id': cur_verb['_id'],
             'infinitive_aze': cur_verb['infinitive_aze'],
             'infinitive_pol': cur_verb['infinitive_pol'],
-            'conjugation_pol': correct_option
+            'conjugation_pol': correct_option,
+            'image_url': cur_verb.get('image_url', None)
         }
 
         question = f"'{current_conjugation['pronoun_aze']} {current_conjugation['conjugation_aze']}'"
-        feedback=session.get('feedback', '')
-        print('feedback: ', feedback)
+        image_url = cur_verb.get('image_url', None)
         return render_template('random_verb.html',
                                is_correct=session.pop('is_correct', None),
                                correct_answer=session.pop('correct_answer', ''),
                                score=session.get('score', 0),
                                question=question,
-                               options=options)
+                               options=options, image_url=image_url)
 
 
 @app.route('/submit', methods=['POST'])
@@ -91,6 +94,7 @@ def submit_answer():
 
     return redirect(url_for('index'))
 
+
 def generate_options(cur_verb):
     correct_option = cur_verb['conjugation_pol']
     options = [correct_option]
@@ -106,7 +110,8 @@ def find_matching_conjugations(imperfective_verbs, excluded_verb_id, target_pron
 
         # Find the conjugation matching the target pronoun
         for conjugation in verb['conjugations']:
-            if conjugation['pronoun_eng'] == target_pronoun_eng and conjugation['conjugation_pol'] != correct_conjugation:
+            if conjugation['pronoun_eng'] == target_pronoun_eng and conjugation[
+                'conjugation_pol'] != correct_conjugation:
                 matching_options.append(conjugation['conjugation_pol'])
 
     # Ensure a diverse selection of options
@@ -121,12 +126,12 @@ def find_matching_conjugations(imperfective_verbs, excluded_verb_id, target_pron
     return matching_options[:3]  # Return up to three options, including the correct one
 
 
-
 @app.route('/clear_results', methods=['POST'])
 def clear_results():
     session.pop('score', None)
     session.pop('used_verb_ids', None)
     return redirect(url_for('index'))
+
 
 @app.route('/clear_cache', methods=['POST'])
 def clear_cache():
@@ -134,10 +139,12 @@ def clear_cache():
     cached_data = None
     return redirect(url_for('index'))
 
+
 @app.after_request
 def log_response_info(response):
     app.logger.debug('Response status: %s', response.status)
     return response
+
 
 def run_app():
     app.run(host='0.0.0.0', port=5000, use_reloader=False)
