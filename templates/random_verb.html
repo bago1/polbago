@@ -247,8 +247,12 @@
         {% if is_correct %}
         <strong>Doğru!</strong>
         {% else %}
-        <strong>Yalnış! Doğru cavab : {{ correct_answer }}.</strong>
+        <strong>😩 Doğru cavab : {{ correct_answer }}.</strong>
         {% endif %}
+        <button class="report-mistake" onclick="openForm()">Şikayət et
+        <!-- Tooltip Text -->
+        <span class="tooltip-text">Məlumatda səhv var</span>
+    </button>
     </div>
     {% endif %}
 
