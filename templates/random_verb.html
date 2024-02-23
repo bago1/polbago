@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Verb Quiz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0 auto;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #f4f4f4;
+        body, html {
+            height: 100%; /* Ensure the full height of the viewport is used */
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
         }
+
 
         h1 {
             color: #333;
@@ -31,6 +31,57 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
+        /* Style for the report mistake button initially showing "?" */
+        .report-mistake {
+            background-color: #9C1A1C;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 50%; /* Makes the button circular */
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            position: relative; /* Needed for positioning the tooltip */
+            margin-left: 10px; /* Space between the feedback text and button */
+        }
+
+        /* Tooltip styling */
+        .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px; /* Center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Tooltip arrow */
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        /* Show the tooltip text when hovering over the button */
+        .report-mistake:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
 
         input[type="submit"], button, a {
             cursor: pointer;
@@ -74,141 +125,223 @@
             border: 1px solid #ebccd1;
         }
 
-           .hidden {
+        .hidden {
             display: none;
         }
+
+        .header-section, footer {
+            padding: 20px 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+
+        .content {
+            flex: 1; /* Allows content to expand and push footer to the bottom */
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto; /* Center the content */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .reset-button {
+            display: block;
+            margin-top: 30px; /* Added space above the reset button */
+            margin-bottom: 20px; /* Space before the next content */
+            width: auto; /* Adjust width as needed */
+            padding: 10px 20px; /* Larger padding for a bigger button */
+        }
+
+
+        .popup-form {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .popup-form form {
+            background-color: #fefefe;
+            margin: 5% auto; /* 5% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .popup-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .option-button {
+            background-color: #337ab7; /* Different background color */
+            color: #ffffff; /* White text color */
+            border: 1px solid #2e6da4; /* Slightly darker border for depth */
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            font-weight: bold; /* Make text bold */
+            margin: 5px; /* Add some margin around buttons */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+            /* Adjustments for a larger appearance */
+            padding: 15px 30px; /* Increase padding for larger size */
+            font-size: 18px; /* Increase font size for better readability */
+            border-radius: 5px; /* Rounded corners for a modern look */
+            cursor: pointer; /* Cursor changes to a pointer to indicate clickable */
+        }
+
+        .option-button {
+            padding: 15px 30px;
+            min-width: 150px; /* Set a minimum width */
+            height: 50px; /* Fixed height */
+            font-size: 18px;
+            margin: 5px;
+            text-align: center; /* Center text inside buttons */
+        }
+
+        .option-button:hover {
+            background-color: #286090; /* Darker shade on hover */
+        }
+
     </style>
 </head>
 <body>
-<!--<h1>Welcome to the Verb Quiz!</h1>-->
-<h1>Xoş gəlmi(ş?)siniz🇦🇿</h1>
-
-{% if feedback %}
-    {% if "Incorrect" in feedback %}
-        <p class="feedback incorrect"><strong>{{ feedback }}</strong></p>
-    {% else %}
-        <p class="feedback"><strong>{{ feedback }}</strong></p>
-    {% endif %}
-{% endif %}
-
-<p style="font-size: 48px; margin-top: 20px;">Score: {{ score }}</p>
-<!-- <button onclick="toggleInfinitive()">Show/Hide Polish Infinitive</button>-->
-<button onclick="toggleInfinitive()">Məsdər formanı göstər/gizlət</button>
-<!-- <p id="polishInfinitive" class="hidden">Infinitive in Polish: {{ session.current_verb.infinitive_pol }}</p>-->
-<p id="polishInfinitive" style="font-size: 24px; margin-top: 24px;">Polyak dilində məsdər: <strong>{{ session.current_verb.infinitive_pol }}</strong></p>
-
-<form method="POST" action="{{ url_for('submit_answer') }}">
-    <label for="answer" style="font-size: 24px; margin-top: 20px;" > Bu sözün polyak dilində tələb olunan halını yaz: </label>
-<label for="answer" style="font-size: 24px; margin-top: 20px;" >  <strong>{{ question }}</strong></label>
-<!--    <label for="answer" style="font-size: 24px; margin-top: 20px;" >Type the Polish form of {{ question }}</label>-->
-    <input type="text" id="answer" name="answer" required autofocus>
-<!--    <button type="submit">Submit</button>-->
-    <button type="submit">Yoxla</button>
-</form>
-
-<form method="POST" action="{{ url_for('clear_results') }}">
-<!--    <button type="submit">Clear Results</button>-->
-    <button type="submit">Nəticəni sıfırla</button>
-</form>
-
-<!--<form method="POST" action="{{ url_for('clear_cache') }}">-->
-<!--    <button type="submit">Clear Cache</button>-->
-<!--</form>-->
-
-<!--<a href="/">Next Question</a>-->
-<a href="/">Növbəti</a>
-
-<!-- Add this button where you want the "Report a Mistake" button to appear -->
-<button style="background-color: #9C1A1C" id="reportMistakeBtn" onclick="openForm()">Məlumatda səhv var</button>
-
-<!-- Popup Form -->
-<div id="reportForm" class="popup-form hidden">
-    <form method="POST" action="/report_mistake"> <!-- Adjust the action URL as needed -->
-        <h2>Səhv Bildir</h2>
-
-        <!-- Hidden field to send the ID or specific data -->
-        <input type="hidden" name="verb_id" value="{{ session.current_verb._id }}">
-
-        <label for="description">Səhv Açıqlaması:</label>
-        <textarea id="description" name="description" required></textarea>
-
-        <button type="submit">Göndər</button>
-        <button type="button" onclick="closeForm()">Bağla</button>
-    </form>
+<div class="header-section">
+    <!--    <button id="reportMistakeBtn" onclick="openForm()" class="mistake-report-button">Məlumatda səhv var</button>-->
 </div>
+<div class="content">
 
-<style>
-/* Additional styles for the popup form */
-.popup-form {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
+    <!--<h1>Welcome to the Verb Quiz!</h1>-->
+    <h1>Xoş gəlmi(ş?)siniz🇦🇿</h1>
 
-.popup-form form {
-    background-color: #fefefe;
-    margin: 5% auto; /* 5% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.popup-form textarea {
-    width: 100%;
-    height: 100px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-</style>
-
-<script>
-// JavaScript for opening and closing the form
-function openForm() {
-    document.getElementById("reportForm").style.display = "block";
-}
-
-function closeForm() {
-    document.getElementById("reportForm").style.display = "none";
-}
-</script>
-
-<script>
-// Check and set the initial state of polishInfinitive based on localStorage
-window.onload = function() {
-    var x = document.getElementById("polishInfinitive");
-    // Retrieve the stored state; default is 'block'
-    var displayState = localStorage.getItem('polishInfinitiveDisplay') || 'block';
-    x.style.display = displayState;
-};
-
-function toggleInfinitive() {
-    var x = document.getElementById("polishInfinitive");
-    if (x.style.display === "none" || x.style.display === "") {
-        x.style.display = "block";
-        localStorage.setItem('polishInfinitiveDisplay', 'block');
-    } else {
-        x.style.display = "none";
-        localStorage.setItem('polishInfinitiveDisplay', 'none');
-    }
-}
-</script>
+    <!--    {% if feedback %}-->
+    <!--    {% if "Incorrect" in feedback %}-->
+    <!--    <p class="feedback incorrect"><strong>{{ feedback }}</strong></p>-->
+    <!--    {% else %}-->
+    <!--    <p class="feedback"><strong>{{ feedback }}</strong></p>-->
+    <!--    {% endif %}-->
+    <!--    {% endif %}-->
+    <!-- Feedback message -->
+    {% if feedback %}
+    <div class="feedback {% if 'Incorrect' in feedback %}incorrect{% endif %}">
+        <strong>{{ feedback }}</strong>
+        <!-- Report Mistake Button -->
+        <button class="report-mistake" onclick="openForm()">şikayət et
+            <!-- Tooltip Text -->
+            <span class="tooltip-text">Məlumatda səhv var</span>
+        </button>
+    </div>
+    {% endif %}
 
 
- <footer style="padding: 20px; background-color: #333; color: white; text-align: center; margin-top: 40px;">
-    <p style="margin: 0;">© 2024 By Bago. All Rights Reserved.</p>
+    <p style="font-size: 48px; margin-top: 20px;">Bal: {{ score }}</p>
+    <button onclick="toggleInfinitive()" style="display: none;">Məsdər formanı göstər/gizlət</button>
+
+    <form method="POST" action="{{ url_for('submit_answer') }}" style="display: none;">
+        <label for="answer" style="font-size: 24px; margin-top: 20px;"> Bu sözün polyak dilində tələb olunan halını
+            yaz: </label>
+        <label for="answer" style="font-size: 24px; margin-top: 20px;"> <strong>{{ question }}</strong></label>
+        <!--    <label for="answer" style="font-size: 24px; margin-top: 20px;" >Type the Polish form of {{ question }}</label>-->
+        <input type="text" id="answer" name="answer" required autofocus>
+        <!--    <button type="submit">Submit</button>-->
+        <button type="submit">Yoxla</button>
+    </form>
+    <form method="POST" action="{{ url_for('submit_answer') }}" id="verbForm">
+        <label for="option" style="font-size: 24px; margin-top: 20px ; margin-bottom: 20px"> <strong>{{ question
+            }}</strong></label>
+
+        <!-- Option buttons -->
+        {% for option in options %}
+        <button type="submit" name="option" value="{{ option }}" class="option-button">{{ option }}</button>
+        {% endfor %}
+    </form>
+
+    <form method="POST" action="{{ url_for('clear_results') }}" style="text-align: center;">
+        <button type="submit" class="reset-button">Nəticəni sıfırla</button>
+    </form>
+
+
+
+    <!-- Popup Form -->
+    <div id="reportForm" class="popup-form hidden">
+        <form method="POST" action="/report_mistake"> <!-- Adjust the action URL as needed -->
+            <h2>Səhv Bildir</h2>
+
+            <!-- Hidden field to send the ID or specific data -->
+            <input type="hidden" name="verb_id" value="{{ session.current_verb._id }}">
+
+            <label for="description">Səhv Açıqlaması:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Göndər</button>
+            <button type="button" onclick="closeForm()">Bağla</button>
+        </form>
+    </div>
+
+    <!-- Your main content here (forms, paragraphs, etc.) -->
+</div>
+<!--<footer style="padding: 20px; background-color: #333; color: white; text-align: center; margin-top: 40px;">-->
+<!--    <p style="margin: 0;">© 2024 By Bago. All Rights Reserved.</p>-->
+<!--</footer-->
+>
+<footer> 2024 By Bago. All Rights Reserved.</p>
 </footer>
 
-
 </body>
+<script>
+    function submitOption(value) {
+        document.getElementById('selectedOption').value = value;
+        document.getElementById('verbForm').submit();
+    }
+</script>
+
+
+<script>
+    function openForm() {
+        document.getElementById("reportForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("reportForm").style.display = "none";
+    }
+</script>
+
+<script>
+    window.onload = function () {
+        var x = document.getElementById("polishInfinitive");
+        // Retrieve the stored state; default is 'block'
+        var displayState = localStorage.getItem('polishInfinitiveDisplay') || 'block';
+        x.style.display = displayState;
+    };
+
+    function toggleInfinitive() {
+        var x = document.getElementById("polishInfinitive");
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block";
+            localStorage.setItem('polishInfinitiveDisplay', 'block');
+        } else {
+            x.style.display = "none";
+            localStorage.setItem('polishInfinitiveDisplay', 'none');
+        }
+    }
+</script>
+
 </html>

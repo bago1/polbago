@@ -36,32 +36,70 @@ def log_request_info():
     app.logger.debug('Headers: %s', request.headers)
     app.logger.debug('Body: %s', request.get_data())
 
+
 @app.route('/')
 def index():
-    data = fetch_data_from_mongo()
-    print("\nlen of data", len(data))
     global used_verb_ids
-    print("used_verb_ids size: ", len(used_verb_ids))
     verbs = list(verbs_collection.find({'_id': {'$nin': used_verb_ids}}))
     imperfective_verbs = [verb for verb in verbs if verb.get('infinite_pol_perfectiveness') == 'imperfective']
-    print("imperfective_verbs : ", len(imperfective_verbs))
-    if verbs:
+
+    if imperfective_verbs:
         cur_verb = random.choice(imperfective_verbs)
         cur_verb['_id'] = str(cur_verb['_id'])
-        random_conjugation = random.choice(cur_verb['conjugations'])
-        print("infinitive_pol: ", cur_verb['infinitive_pol'])
+        print('cur_verb: ', cur_verb['infinitive_pol'])
+
+        # Select a random conjugation from the current verb to focus on
+        current_conjugation = random.choice(cur_verb['conjugations'])
+        target_pronoun_eng = current_conjugation['pronoun_eng']
+        correct_option = current_conjugation['conjugation_pol']
+
+        # Find matching conjugations from other verbs
+        options = find_matching_conjugations(imperfective_verbs, cur_verb['_id'], target_pronoun_eng, correct_option)
+
+        print('options: ', options)
+
         session['current_verb'] = {
             '_id': cur_verb['_id'],
             'infinitive_aze': cur_verb['infinitive_aze'],
-            'infinitive_pol': cur_verb['infinitive_pol'],  # Ensure this line is present
-            'conjugation_pol': random_conjugation['conjugation_pol']
+            'infinitive_pol': cur_verb['infinitive_pol'],
+            'conjugation_pol': correct_option
         }
 
-        question = f" '{random_conjugation['pronoun_aze']} {random_conjugation['conjugation_aze']}'"
-        # question = f"Type the Polish form of '{random_conjugation['pronoun_eng']} {random_conjugation['conjugation_eng']}'"
+        question = f"'{current_conjugation['pronoun_aze']} {current_conjugation['conjugation_aze']}'"
 
         return render_template('random_verb.html', feedback=session.get('feedback', ''),
-                               score=session.get('score', 0), question=question, verbs=verbs)
+                               score=session.get('score', 0), question=question, options=options)
+
+
+def generate_options(cur_verb):
+    correct_option = cur_verb['conjugation_pol']
+    options = [correct_option]
+    return options
+
+
+def find_matching_conjugations(imperfective_verbs, excluded_verb_id, target_pronoun_eng, correct_conjugation):
+    matching_options = []
+    # Iterate over the verbs, excluding the current verb
+    for verb in imperfective_verbs:
+        if verb['_id'] == excluded_verb_id:
+            continue  # Skip the current verb
+
+        # Find the conjugation matching the target pronoun
+        for conjugation in verb['conjugations']:
+            if conjugation['pronoun_eng'] == target_pronoun_eng and conjugation['conjugation_pol'] != correct_conjugation:
+                matching_options.append(conjugation['conjugation_pol'])
+
+    # Ensure a diverse selection of options
+    random.shuffle(matching_options)
+    if len(matching_options) > 2:
+        matching_options = matching_options[:2]
+
+    # Add the correct option and ensure it's in the final list
+    matching_options.append(correct_conjugation)
+    random.shuffle(matching_options)  # Shuffle to mix the correct answer among the options
+
+    return matching_options[:3]  # Return up to three options, including the correct one
+
 
 @app.route('/submit', methods=['POST'])
 def submit_answer():
