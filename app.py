@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.DEBUG, filename=log_file_path, filemode='a', f
 logger = logging.getLogger()
 
 # Since Flask uses its own logger, attach the file handler to Flask's logger to capture its logs as well
-file_handler = logging.FileHandler(log_file_path)
+file_handler = logging.FileHandler(log_file_path)c
 file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
 app = Flask(__name__)
