@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Verb Quiz</title>
+    <title>Polbago</title>
     <style>
         body, html {
             height: 100%; /* Ensure the full height of the viewport is used */
@@ -229,17 +229,9 @@
 </div>
 <div class="content">
 
-    <!--<h1>Welcome to the Verb Quiz!</h1>-->
     <h1>Xoş gəlmi(ş?)siniz🇦🇿</h1>
 
-    <!--    {% if feedback %}-->
-    <!--    {% if "Incorrect" in feedback %}-->
-    <!--    <p class="feedback incorrect"><strong>{{ feedback }}</strong></p>-->
-    <!--    {% else %}-->
-    <!--    <p class="feedback"><strong>{{ feedback }}</strong></p>-->
-    <!--    {% endif %}-->
-    <!--    {% endif %}-->
-    <!-- Feedback message -->
+
     {% if feedback %}
     <div class="feedback {% if 'Incorrect' in feedback %}incorrect{% endif %}">
         <strong>{{ feedback }}</strong>
@@ -274,9 +266,9 @@
         {% endfor %}
     </form>
 
-    <form method="POST" action="{{ url_for('clear_results') }}" style="text-align: center;">
-        <button type="submit" class="reset-button">Nəticəni sıfırla</button>
-    </form>
+<!--    <form method="POST" action="{{ url_for('clear_results') }}" style="text-align: center;">-->
+<!--        <button type="submit" class="reset-button">Nəticəni sıfırla</button>-->
+<!--    </form>-->
 
 
 

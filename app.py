@@ -107,7 +107,12 @@ def submit_answer():
         session['feedback'] = "There was an error with the current question. Please try again."
         return redirect(url_for('index'))
 
-    user_answer = request.form['answer'].strip()
+    # Handling option selection
+    user_answer = request.form.get('option', '').strip()
+    if not user_answer:
+        # Fallback to text input if no option was selected
+        user_answer = request.form.get('answer', '').strip()
+
     correct_answer = session['current_verb']['conjugation_pol']
 
     if user_answer.lower() == correct_answer.lower():
