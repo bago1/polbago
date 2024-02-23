@@ -9,3 +9,13 @@ pip install Flask
  pip install pymongo
 
 (venv) root@travel-boys:/home/projects/polbago# nohup python3 app.py &
+
+cd /home/projects/polbago
+
+python3 -m venv venv
+source venv/bin/activate
+ pip install python-daemon
+ pip install Flask
+ pip install pymongo
+ nohup python3 app.py &
+pip install Flask pymongo python-daemon daemon
