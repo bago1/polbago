@@ -117,12 +117,15 @@
             color: #3c763d; /* Default green text */
             border: 1px solid #d6e9c6;
             border-radius: 5px;
+            font-size: 20px;
         }
 
         .feedback.incorrect {
             background-color: #f2dede; /* Red background for incorrect answers */
             color: #a94442; /* Red text for incorrect answers */
             border: 1px solid #ebccd1;
+            font-size: 20px;
+
         }
 
         .hidden {
@@ -229,17 +232,16 @@
 </div>
 <div class="content">
 
-    <h1>Xoş gəlmi(ş?)siniz🇦🇿</h1>
+    <h1>Xoş gəlmi(ş?)siniz🇦🇿🇵🇱</h1>
 
 
-    {% if feedback %}
-    <div class="feedback {% if 'Incorrect' in feedback %}incorrect{% endif %}">
-        <strong>{{ feedback }}</strong>
-        <!-- Report Mistake Button -->
-        <button class="report-mistake" onclick="openForm()">şikayət et
-            <!-- Tooltip Text -->
-            <span class="tooltip-text">Məlumatda səhv var</span>
-        </button>
+    {% if is_correct is not none %}
+    <div class="feedback {% if not is_correct %}incorrect{% endif %}">
+        {% if is_correct %}
+        <strong>Doğru!</strong>
+        {% else %}
+        <strong>Yalnış! Doğru cavab : {{ correct_answer }}.</strong>
+        {% endif %}
     </div>
     {% endif %}
 
@@ -266,10 +268,9 @@
         {% endfor %}
     </form>
 
-<!--    <form method="POST" action="{{ url_for('clear_results') }}" style="text-align: center;">-->
-<!--        <button type="submit" class="reset-button">Nəticəni sıfırla</button>-->
-<!--    </form>-->
-
+    <!--    <form method="POST" action="{{ url_for('clear_results') }}" style="text-align: center;">-->
+    <!--        <button type="submit" class="reset-button">Nəticəni sıfırla</button>-->
+    <!--    </form>-->
 
 
     <!-- Popup Form -->

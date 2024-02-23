@@ -46,17 +46,13 @@ def index():
     if imperfective_verbs:
         cur_verb = random.choice(imperfective_verbs)
         cur_verb['_id'] = str(cur_verb['_id'])
-        print('cur_verb: ', cur_verb['infinitive_pol'])
 
-        # Select a random conjugation from the current verb to focus on
         current_conjugation = random.choice(cur_verb['conjugations'])
         target_pronoun_eng = current_conjugation['pronoun_eng']
         correct_option = current_conjugation['conjugation_pol']
 
-        # Find matching conjugations from other verbs
         options = find_matching_conjugations(imperfective_verbs, cur_verb['_id'], target_pronoun_eng, correct_option)
 
-        print('options: ', options)
 
         session['current_verb'] = {
             '_id': cur_verb['_id'],
@@ -66,10 +62,34 @@ def index():
         }
 
         question = f"'{current_conjugation['pronoun_aze']} {current_conjugation['conjugation_aze']}'"
+        feedback=session.get('feedback', '')
+        print('feedback: ', feedback)
+        return render_template('random_verb.html',
+                               is_correct=session.pop('is_correct', None),
+                               correct_answer=session.pop('correct_answer', ''),
+                               score=session.get('score', 0),
+                               question=question,
+                               options=options)
 
-        return render_template('random_verb.html', feedback=session.get('feedback', ''),
-                               score=session.get('score', 0), question=question, options=options)
 
+@app.route('/submit', methods=['POST'])
+def submit_answer():
+    if 'current_verb' not in session:
+        return redirect(url_for('index'))
+
+    user_answer = request.form.get('option', '')
+    correct_answer = session['current_verb']['conjugation_pol']
+
+    is_correct = user_answer.lower() == correct_answer.lower()
+    session['is_correct'] = is_correct
+    session['correct_answer'] = correct_answer
+
+    if is_correct:
+        session['score'] = session.get('score', 0) + 1
+    else:
+        session['score'] = session.get('score', 0)  # Keep score the same or handle it as needed
+
+    return redirect(url_for('index'))
 
 def generate_options(cur_verb):
     correct_option = cur_verb['conjugation_pol']
@@ -101,28 +121,6 @@ def find_matching_conjugations(imperfective_verbs, excluded_verb_id, target_pron
     return matching_options[:3]  # Return up to three options, including the correct one
 
 
-@app.route('/submit', methods=['POST'])
-def submit_answer():
-    if 'current_verb' not in session or not session['current_verb']:
-        session['feedback'] = "There was an error with the current question. Please try again."
-        return redirect(url_for('index'))
-
-    # Handling option selection
-    user_answer = request.form.get('option', '').strip()
-    if not user_answer:
-        # Fallback to text input if no option was selected
-        user_answer = request.form.get('answer', '').strip()
-
-    correct_answer = session['current_verb']['conjugation_pol']
-
-    if user_answer.lower() == correct_answer.lower():
-        session['feedback'] = "Correct!"
-        session['score'] = session.get('score', 0) + 1
-        used_verb_ids.append(session['current_verb']['_id'])
-    else:
-        session['feedback'] = f"Incorrect. The correct answer is {correct_answer}."
-
-    return redirect(url_for('index'))
 
 @app.route('/clear_results', methods=['POST'])
 def clear_results():

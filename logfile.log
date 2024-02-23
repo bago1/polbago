@@ -5847,3 +5847,969 @@ Cookie: session=.eJxVzkEOwiAQBdCzOOsuUEKRbr2GCaEwNGMVDIUu2vTujokbN7N5___MDr6Vgqn
 
 2024-02-23 01:38:00,393 - app - DEBUG - Body: b''
 2024-02-23 01:38:00,548 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:44:43,327 - app - DEBUG - Headers: Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+
+
+2024-02-23 01:44:43,328 - app - DEBUG - Body: b''
+2024-02-23 01:44:43,749 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:44:43,797 - app - DEBUG - Headers: Host: 127.0.0.1:5000
+Connection: keep-alive
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Sec-Ch-Ua-Platform: "Linux"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVy0EOgjAQQNG7zJoFpCm1nMWkGWkxY2SqkykECHe37nT9_j9gLCKJNSxJbjAcECjCAL2NzvjUX7yzk_PRm4jWmQgNjJkf5Y5KmcMrP2usa5b9Wtqu89WJJ2JSWlLAPVXeUFBnfP_bz7p939bBeX4AN2MwKA.Zdfqew.lc6AB3_rPwQYkZMRIEdg9RGL8lI
+
+
+2024-02-23 01:44:43,798 - app - DEBUG - Body: b''
+2024-02-23 01:44:43,798 - app - DEBUG - Response status: 404 NOT FOUND
+2024-02-23 01:44:46,162 - app - DEBUG - Headers: Host: 127.0.0.1:5000
+Connection: keep-alive
+Content-Length: 15
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://127.0.0.1:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVy0EOgjAQQNG7zJoFpCm1nMWkGWkxY2SqkykECHe37nT9_j9gLCKJNSxJbjAcECjCAL2NzvjUX7yzk_PRm4jWmQgNjJkf5Y5KmcMrP2usa5b9Wtqu89WJJ2JSWlLAPVXeUFBnfP_bz7p939bBeX4AN2MwKA.Zdfqew.lc6AB3_rPwQYkZMRIEdg9RGL8lI
+
+
+2024-02-23 01:44:46,162 - app - DEBUG - Body: b'option=pozwalam'
+2024-02-23 01:44:46,163 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:44:46,167 - app - DEBUG - Headers: Host: 127.0.0.1:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://127.0.0.1:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjssKgzAURH8l3LWIIjGNf9B9l4VwTa5t-kjaGBUV_70pdGGXw5nDzAp6CIFcVCOFFpoVlDXQQM2NqCTVByl4J6SRlUEuKgMZaO9uwwWj9U69_COV4-TDch6KspSJW9dZZ6MdSeFCCc8YMD7x_c926vx1CwFbBh2RaVHfEzo67dM1HXN2uhL7BYaunygw27PdbA7bB6cFREE.Zdfqfg.v2HSE728WhYhHM8KgI5NKn6CuOA
+
+
+2024-02-23 01:44:46,168 - app - DEBUG - Body: b''
+2024-02-23 01:44:46,325 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:33,610 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzsEOwiAMgOFnsecdpoQxdvU1TAgrxdQpGIQdXPbuNl6MtyZf_6YbYCuFUnUrlRmmDRwHmGDQwShLw2iNjsYGq4LXZjTQAeZ0a1dfOSf3zHdZrsXjpfXHXgtzipy48krOv0lU5vIQPmm7_Puv5m9uYO8gEoXZ4yJyzvIa1oNUL8xFjqn9A-3rOYM.Zdfo6A.Sl97p6QKR9YLDiSHeYpgPHBqJA4
+
+
+2024-02-23 01:53:33,610 - app - DEBUG - Body: b''
+2024-02-23 01:53:33,998 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:36,445 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 18
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOwiAQRc_irLvAEErp1muYEApTM9WCIjSxTe_u6ErX772fv4GvOWMsdsE8QL-BpQA9tCpoabDtjFajNsHI4JTuBDTgU5zqxRVK0d7TjeWS19fspnMVR6HYoDhSpEILWrfiR6hldo9_8pt-Sw17AyNiGJy_MjolPubLgbOnT5l35P4Gxz854g.ZdfsjQ.aHljyayeu2baZspu6dK-sfh0HHw
+
+
+2024-02-23 01:53:36,446 - app - DEBUG - Body: b'option=wierz%C4%85'
+2024-02-23 01:53:36,446 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:36,451 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxtj8sOgjAQRb_FWbPAEChl62-YNEM7NUVstQ-MEP7doi40cTv3nJs7C0jnPcko0IY7eegg-vlxweGYyn1ZQwEyZcBGMZHvoVtAGJWpplas4tS0nNWaccUrhTVry01wdkgnjMZZcXXjn0pjtbEmmokEzrQBKV7w9pt8qy-TwVqAJlI9ynOODu_lu00L4vMHdBrHQAWEfMjV1foE5f9MOw.ZdfskA.4DsKyvRRlRlVz82bN6N0_pzpCHs
+
+
+2024-02-23 01:53:36,451 - app - DEBUG - Body: b''
+2024-02-23 01:53:36,604 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:37,902 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 22
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxtjsEOwiAQRL_FPfdAQyjSq79hQigsZtWCItTEpv_u9mjiZeYwbyazgm-lYKp2wTLBuIKlACMMKmhpcDgaraI2wcjglJYIHficru3iKuVkH_nO8HxuQkT5JvZeKGYoRUpUaUHrPshIcGkPZb-rirN7_lL_hjRsHUTEMDl_4_SU-amvB26-fC48K7cvSFA9wQ.ZdfskA.o01DwbYh84KDr42EWAoMI1RIO9s
+
+
+2024-02-23 01:53:37,902 - app - DEBUG - Body: b'option=m%C3%B3wi%C4%85'
+2024-02-23 01:53:37,903 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:37,908 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxtj80OwiAQhJ_FPffQBinSq69hQigsBrWg_LSJTd9diF5MetnNZr6ZzaygfAiokpAuLhhggOmS29aQxZbdtRQaULkgLokZwwjDCsLqwvVUM8KxP3FGDeOaEy0pI1gN3t3yVSbrnXj6x26odcY6m-yMQr6xIFq6KpKuTmom-fqn9oIYbA0YRD1KdS_q-VvmUJ1R_KrBkELGBmK5y6Pj9gE6Jk_W.ZdfskQ.d9j5TwwU8Nz6jfBMBx8ZDXLAVEs
+
+
+2024-02-23 01:53:37,908 - app - DEBUG - Body: b''
+2024-02-23 01:53:38,062 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:39,102 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 12
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjjsOwjAQRK8CW6cIGMc4LddAshx7A5uAjfxJkSh3Zysk2nnzRrOBqylhKGbBNEC_gSEPPXTSK6Gxu2olR6W9Ft5KpQQ04GKY6sMWisF84ovLbq0TMqEwUqBCCxq7IoMn5XzA8r7X9iz1_F_5uUxPrYK9gRHRD9bNnN8i33LlyE52MfHaZf8CNL44lg.Zdfskg.XsiBZsTxDg7frnQtRAMfuFYX-GU
+
+
+2024-02-23 01:53:39,103 - app - DEBUG - Body: b'option=widzi'
+2024-02-23 01:53:39,103 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:39,108 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjssOgjAQRX9FZ80CxVLLlt8waUo71QK2pg9MIPy7JRqj23vm3LkLSOc9ysiFDU_00ICcU49QgEwZ2Mgn9B00C3CjMq2JohXD-swo0ZQpVilBKK02wdk-XUU0zvKHG3-qjNXGmmgm5GLGDG4mhB3G-yWVR8KG_5Ovm-mhpLAWoBFVJ-SQ8_a9d785gX_WQ6PFGLCAkIP84LS-AOUcSGg.Zdfskw.pRROS9E6B3p1k57heAFSODK3qqA
+
+
+2024-02-23 01:53:39,108 - app - DEBUG - Body: b''
+2024-02-23 01:53:39,331 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:40,242 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 20
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOgjAQRc_irFlgsNSy9RomzdBOTRFaLS1RCHd34krX772fv4EpKVHIeqHUQ7eB9hY6aIWVjaL2rKRwUlnVWBRSIFRgYhjKDbOPQT_iyHJO63vC4VrqYy3Y8MH54LNfSONKLMz4GnHC5z_7jb-thL0CR2R7NHdGl8jXTD5wNpuYeOm0fwBX9zrN.Zdfskw.FpZP8S37AafqtbnsDCK81wYZcd4
+
+
+2024-02-23 01:53:40,243 - app - DEBUG - Body: b'option=trzymaj%C4%85'
+2024-02-23 01:53:40,243 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:40,248 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxtj8sOgjAQRb_FWbPAmFLL1t8waYZ2MEVotQ9UCP9uUReauJzcc27uzKCc96SiRBtu5KGG6KfHgN0xlduSQQEqZcBGOZJvoJ5BGp2pimm-E1TtBWctF1rsNDLOcBWc7dIJo3FWXlz_p9LY1lgTzUgSJ8pAwHuPA15_s2_55XJYCmiJdIPqnKPDe_tm1YL8fAJ19IkKCPnO3Wx5AlKMTNw.ZdfslA.LVP40XB_ZaJfh1g4OGpuuyT6xxg
+
+
+2024-02-23 01:53:40,248 - app - DEBUG - Body: b''
+2024-02-23 01:53:40,397 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:41,369 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 13
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjksOwjAMBa8CXndRqNI0bLkGUuQmLko_MQpJQVS9O17Cemae3gaupEQx25VSD5cNbPBwgVZ53RhqO6PVoI03jUelO4QKHMex3DEHjvbBs8jc07iUkQSGOIQYcljJ4oeEeXyH-UB5uZX6rMz07_z0_EJRTrWGvYKByPfoJoFXln8uHyV8Ok6yqfYvhFE8Uw.ZdfslA.0tcXijZJhuMH1IJ_lRLZ2SFaiIY
+
+
+2024-02-23 01:53:41,369 - app - DEBUG - Body: b'option=obraca'
+2024-02-23 01:53:41,370 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:41,374 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVj8sOgjAQRX9FZ80CJaWUrb9h0gzt1JRHa0oBI-HfLdGFbOecOzN3BeVDIBUlunGhADX4htphagkyUFNiLsqZQgP1CtLqJJRM80JQWQnODBdaFBoZr3APeNdOD4zWO_n0_XGbdcY6G-1MEt-UmMaX7U8Uh_uUX5nojs5f3i-YlEvOYcvAEOkGVZfg7fv7eQ-O8tcEaoP9SBmMaZDOsO0D2XtNVQ.ZdfslQ.wQaefeWu_wZKDS6V0wlJjbMF6lM
+
+
+2024-02-23 01:53:41,375 - app - DEBUG - Body: b''
+2024-02-23 01:53:41,527 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:53:42,534 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjksOwjAMRK8CXndRqNKQbrkGUpSPg0xpgtKki1a9O0asuvLnzYy9gas5Yyx6wWxh2ECThwF64WWnsL8pKYJUXnXeCN5AAy7FV32aQinqT3qzOKe1ToTzypRioEiFFtRmRYbWPGp7EcGcPDdtcP9x4nIVajxaDnk_YSthbyAgemvcyOye-F1XzuybXcp8QexfAPxAtQ.ZdfslQ.l-TYf04mf4DCeFFY3YmUoct5u7c
+
+
+2024-02-23 01:53:42,534 - app - DEBUG - Body: b'option=rozumiesz'
+2024-02-23 01:53:42,535 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:53:42,539 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdT0sOgjAQvYrOmgVKSi1br2HSlHZqKtqafjCBcHeH4AZXM2_eZ_Jm0CFG1Fkqnz4YoYMYpvJymCaoQBcifZYjxh66GaQzpGiZ4Y3A9iI4s1wY0RjF6LIagn-Uu8ouePkOz784563zLrsRpZqQyF7dSn1iVh0MLbXVG3zRODMx7C27vFVYc1gqsIimV3og7rp1Oa6-JH_NoMuxYAWJMP1sly-JOVIU.Zdfslg.BqXqX9eskgTspCeKq9BGTNW3rKg
+
+
+2024-02-23 01:53:42,540 - app - DEBUG - Body: b''
+2024-02-23 01:53:42,698 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:18,130 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzj0OgzAMhuGz1DMDCCUhrL1GpSjEpnJ_kjYkDCDuXndr58fvJ-8Qas4Ui1spTzDu4BhhBK3Q9Jb0YI2ajUXbo1dmUNBASPFWr75wiu6VHnK8MOF2qW3XWXGOM0cuvJLzGwmnUvPTv__pp2T6tq2Bo4GZCCcf7mLnJI-FcpJuCSnLkj4-s6A5sA.Zdfslg.BHGJuSNZT_N9Bt7AqpWVjpPtGSg
+
+
+2024-02-23 01:54:18,131 - app - DEBUG - Body: b''
+2024-02-23 01:54:18,529 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:19,988 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 22
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzkEOgjAQheGr6KxZgKQtZes1TJqhHUxBWlNbjBLu7rhkPd_8eRvYkhKFbFZKA_QbGO-gBymcajXJTisxKu1061CoboAKbAxTuWP2MZhnfDCeY8ifUMp0K3XTaDY-jD747Fcy-CUmDldcTpQXJheh56M5ZOIb_51awV7BSOQGtDOfr5GH2nzm15eNiaty_wG8cz-Z.Zdfsug.5RMBdCcEwxrmzz3XSvLuUXrw-dI
+
+
+2024-02-23 01:54:19,989 - app - DEBUG - Body: b'option=kontynuuj%C4%99'
+2024-02-23 01:54:19,989 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:54:19,994 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxtj0EOgjAQRa-is2YBklLK1muYNKUdTEGmprQQJdzdEt2QuJz899_kr6Cd96iDVDQt6KGBwVF4UYz9LeZFISADHRNCQc7oW2hWkNYkrmKGlwKrWnDWcWFEaRTjdbsXHPXxroJ1JJ_u8VdqqbNkg51RqjcmxKhZjScMY0IuTAxH5qBxi9o9OYctgw7RtEoPKb5-t5z36iR_y6AJPmIGU7rTH759AIkyUpM.Zdfsuw.aHn9rE2vjB0nfMaYUUQQg-_Q808
+
+
+2024-02-23 01:54:19,994 - app - DEBUG - Body: b''
+2024-02-23 01:54:20,151 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:21,239 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 17
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOgyAURM_Sv3ZhaxBx22s0IQgfg1YwCBo13r0_6aZdzeK9mcwJOseIPskVYwftCdIZaKFmhlcC60ZwZrkwojKKcd5AATr4IfcqueDlHN4kz2FURx5w2gk7b513ya0o1YFE-1cuS1svifLBRJy-Of67P0v7pki5lxyuAiyi6ZQeCT4DPdXpRsVFh0jb_PoA20Y_bg.ZdfsvA.xXRC166dTKOJUhzJMEWrRDvhSKc
+
+
+2024-02-23 01:54:21,239 - app - DEBUG - Body: b'option=pokazujemy'
+2024-02-23 01:54:21,239 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:54:21,244 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdj80OgjAQhJ_FPXNATSnl6muYNKVdSEFa0h8IEN7dEjyop8nmm5nNbCCtcygDF8bP6KCC0fZijR0OC2QgY6Im8AldDdUGXKtkKYiid4ZFyShpKFPsrgShtDwC1nSxFUFbw0f7-u_TptFGBz0hFysm2j5jnjeFD0lvhLnh1P7X-9W0zCJZrjmFPYMGUdVC9gk-zh2XI-j5ZxVUwUXMwKc7fSv3N2jyUSQ.ZdfsvQ.o-iCKu8Ast81vgDxgWtK5ghQjWM
+
+
+2024-02-23 01:54:21,244 - app - DEBUG - Body: b''
+2024-02-23 01:54:21,397 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:22,004 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 14
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjj0OgzAMha_SemagRSGEtdeoFIXEqVxKgkLCAOLuddWJyT_fe8_ewZaUMGS9Yhqg30GTgx5a4WSjsO2UFF4qpxpnBG-gAhvDu7xMphj0HD8sTnErE-GyMaXgKVCmFbXZkOFgnqW-CW8ujpva2_84cbkLNZ4tp7yfsJZwVOAR3WDsyOwR-V2br-xbbEx8oTu-AQJAuA.ZdfsvQ.RYBKAZytxW9Q01EjCBReqy1AnuU
+
+
+2024-02-23 01:54:22,004 - app - DEBUG - Body: b'option=biegasz'
+2024-02-23 01:54:22,004 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:54:22,009 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdT80OgyAMfpWtZw9uBhle9xpLCEJZmAoLoEs0vvtq3MWd2n5_zbeADjGizlL59MEIDcQwj4PDNEMBeiTSZzlhbKFZQDpDipoZXgmsb4Izy4URlVGMkM0Q_Gt8quyCl-_Q_8U5b5132U0o1YxEtuoxlhdm1cnQUlq9nwONKxPd0XLI24Qlh7UAi2hapTvi7nuX8-ZL8tcMGqv6hAUkAujpbf0C2u1SYQ.Zdfsvg._cefr1I5roQF5-nAGECLTGBIr1c
+
+
+2024-02-23 01:54:22,010 - app - DEBUG - Body: b''
+2024-02-23 01:54:22,126 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:26,073 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzs0OwiAQBOBncc891JCW0quvYULospj1B5RCo2367u5Rz9_MZDbAmjPFYhfKE4wbWPYwQt95rQz1g9Fd0MYb5V2nVYAGMMVrvbjCKdpnuksY109xIhwDRy68kHUrCaR3fbjXv_xUzrU9thr2BgKRnxzeRE5J_mA5SGvGlGVm2L_q9zce.Zdfsvg.ztKMsYCgxckIVr8oJ5c_S9ec3ak
+
+
+2024-02-23 01:54:26,073 - app - DEBUG - Body: b'option=m%C3%B3wi'
+2024-02-23 01:54:26,073 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:54:26,079 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjssOgjAQRb_FWbPAEChl62-YNEM7NVVstQ9QCP9uiS5we0_OyV1AOu9JRoE2TOShAzm_I0IBMmVgoxjJ99AtIIzKtKkVqzg1LWe1ZlzxSmHNKr0Jzl7TBaNxVjzcsEsZq4010YwkcKYM3Cvd8flPdso5lceSwVqAJlI9ylsmp-_Rw2YF8bsNncYhUAEhD7ncrh9IAEb6.Zdfswg.iyR1OoPm2SKKTZnolH6OTxcsk48
+
+
+2024-02-23 01:54:26,079 - app - DEBUG - Body: b''
+2024-02-23 01:54:26,434 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:54:27,238 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 14
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjsEOgjAQRL_FPXOAYCnl6m-YNEu7mCq2WFqiEP7dNV70NIf3ZjIbmBwj-aQXij10G2hnoYNGWFkralolxSCVVbVFIcURCjDBX_MFkwteT2FkOU9ocV6ZOT8475JbSONKjF7nXFZ19fzGeMfHv_Uz8FFKCXsBA5Ht0dyYnAK_M-nArdmEyJPt_gbBuDrI.Zdfswg.81gGya5jn2QAc1kSBktnxAsd_xE
+
+
+2024-02-23 01:54:27,239 - app - DEBUG - Body: b'option=tracisz'
+2024-02-23 01:54:27,239 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:54:27,245 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVj80OgjAQhJ_FPXOAYClw9TVMmqXdmioW7Q8qhHe3BA9y2mS_mdnZGeTgHMkg0PoXOWghPlChnyADGROyQYzkOmhnEEYlXjHFy4aquuFM80Y1pULG2XE1DPYaLxjMYMVj6HdhxmpjTTAjCZwooc855kVZvLfR3_G5V_0FrJKcw5KBJlIdylsip634YXV58XsDWo29pwx8WqQr9fIFlXxLcQ.Zdfsww.Qt62BPX5O1ypbFFCPxJ02Vv26XQ
+
+
+2024-02-23 01:54:27,245 - app - DEBUG - Body: b''
+2024-02-23 01:54:27,404 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:55:34,798 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOwiAQRc_irLuoVkrp1muYEDoMSlEwFLqw6d2duNL1e-_nb4A1Z4pFr5QnGDfQ3sIIvbCyU9QPSgonlVWdNUKeJTSAKc71ZopPUb_Sg-WQ8G7ma22PrWDBR-ejL34lbd7EfKH1yfQkVPjHP_m3lrA34IjsZDAwuST-huXA1YIp89awfwApEznT.Zdfsww.RS7lLZt7GPApG6P_AZorKoFqS7w
+
+
+2024-02-23 01:55:34,798 - app - DEBUG - Body: b''
+2024-02-23 01:55:36,072 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:55:38,776 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 17
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdjsEOgjAQRH9F98wBxVLK1d8waUq7mBVpSVk4QPh3N_Gkx8l7M5kd_JIzRrYr5g7aHSwFaKFWQVcG68Zo1WsTTBWc0s0NCvApvpanY0rRTuktckgzu-w3Nwqm2FMkphWt21AoP5byqsxI8YQ8fsPwK_7NiHMpNRwF9Iihc34Qek_y0_NZmrNPWZab4wNaoj7O.ZdftCA.mTobWkgJYng8Nnce7ekIfKPAyhE
+
+
+2024-02-23 01:55:38,776 - app - DEBUG - Body: b'option=dostarczam'
+2024-02-23 01:55:38,777 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:55:38,782 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdj00OgjAQha-is2aBYill6zVMmtIOpiKtaaeYQLi7JbjR5cv3fvIW0D4E1CSVi28M0ILxkVTQsxqhAJ0ydSQnDB20C0hrsqVmhlcC60Zw1nNhRGUU481lC3j3SHdF1jv58s__Put66yzZCaWaMVO6pfLMxGjdAWncxfBr_KvJnlPJYS2gRzSd0kOm1_3FcUtG-f0ELYWEBcSs85ZYP7ORUG0.ZdftCg.uKymANrHF59J1OK43sEDHLwy9TE
+
+
+2024-02-23 01:55:38,782 - app - DEBUG - Body: b''
+2024-02-23 01:55:38,936 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:56:18,224 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjsEOgjAQRH9F98wBJKWWq79h0pTtogvamtJygPDv7snE67x5k9kBS0oUsl0pDdDvYNlDD53yujXUXY1WozbetN4p3TZQAcYwlYfLHIP9xJeUcSsTIZNADiMHzrySdRsJe_KynCi_76W-KDP_V3660KbWcFQwEvnB4Sz5LcozzGdxFoxJ1szxBfGWOcY.ZdftCg.0gj4dUuF27yDjHcdACn12cOpMfI
+
+
+2024-02-23 01:56:18,225 - app - DEBUG - Body: b''
+2024-02-23 01:56:18,639 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:56:19,896 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 12
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjsEOgjAQRL_FPXNASanl6m-YNKXdmgVsSWkxkfDvLvFgPM3hvZnMBrakhCHrFVMP3QaaHHTQCicbhe1VSeGlcqpxRsgWoQIbw1AeJlMMeo4Ty3MytgwHo-ApUKYVtXkjI7qX-iz8xHER6vmN8d_8jcSXOfxawl6BR3S9sSOzW-SPNp-4t9iYeFjtHzEcPMM.ZdftMg.M1uyWvvSfLxz7WMThveAffujGqE
+
+
+2024-02-23 01:56:19,897 - app - DEBUG - Body: b'option=idzie'
+2024-02-23 01:56:19,897 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:56:19,901 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVj8EKgzAQRL-le_ZgW2Iar_2NQliTTYnaRJKoUPHfG2uheBrYNzO7u4DyIZBKEl2cKUANQ0A1tgQFqDEjl-REoYF6AWl15hXT_CqougnODBdaXDUyXn0D3rXjE5P1Tg6-P5RZZ6yzyU4k8U0Z2cdYnpnps1yYeO3SHZ3_Ej_j5i85rAUYIt2g6jK77-eftlyUv2egNthHKiDmQd4l1g9Zzk1e.ZdftMw.MdDQCsxEDIWoz0p1k963Z9XLqEU
+
+
+2024-02-23 01:56:19,902 - app - DEBUG - Body: b''
+2024-02-23 01:56:20,056 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:56:21,198 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 15
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzsEOwiAQBNBvcc89VCtd6dXfMCEUFsVaaCiQaNN_d496fjOT2cCUlChkVSmNMGygvIUBemGxk9RfJAqH0srOaoFnhAZMDM9y19nHoJb44vAUzUPPbzYfnA8--0pKf4hppTrfSnsScvrnnyb7sUXYG3BEdtRmYrlGvmXygVuriYm35P4FPy44uQ.ZdftNA.712jhR3dvxiepnP9hUHQOePI5GA
+
+
+2024-02-23 01:56:21,198 - app - DEBUG - Body: b'option=zabijamy'
+2024-02-23 01:56:21,198 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:56:21,203 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVzkEOgjAUBNCz-NcsUCy1bL2GSfNpf7UCrWkLRgl3t0QXsp2XmcwMyodAKkl08UkBGui8uuHwggLUmMklOVFooZlBWp29ZppXguqT4MxwoUWlkfEjXwve3ccrJuudfPh-M2adsc4mO5HEN2WKNA2XsTww0W35r5l9X3JYCjBEukXVZTl_H-_WVpS__9AY7CMVEHOQ58XyAZ33SVY.ZdftNQ.yCGDi8sbg_l00bHyk6iEyLEqkl4
+
+
+2024-02-23 01:56:21,203 - app - DEBUG - Body: b''
+2024-02-23 01:56:21,359 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:56:22,639 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 17
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjssOwiAQRb_FWXeBaSnSrb9hQqYwmPEBilATm_67s-36nHNzV_CtFErVLVRmmFZwHGCCUQfTWxpP1uhobLB9QG2GATrwOd3aFSvn5F75IXKuX6aCnkkwp8iJKy_k8EdC8dKUIvPE957uWnGOysDWQSQKM_q7sHOWa74epPv4XGTMbn9ItDqR.ZdftNQ.QK0GWrUzZOOIcfK9vohPivoxqS4
+
+
+2024-02-23 01:56:22,639 - app - DEBUG - Body: b'option=otwieracie'
+2024-02-23 01:56:22,639 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 01:56:22,644 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdj8sOgjAQRb_FWbMo4VHL1t8waYZ2MOOj1dJCIuHfLdENLifnnps7CxgfApmo0Y0zBejAx5kpoGGCAkzK1EU9UeihW0CzzZG2sbJS1B6VbAaprKosNrKuN8G7a7pgZO_009__-9gN7DjyRBrflCmekxAkH_ja052bM6WQsBYwENkezS2z03f4YfNG_XsDuhgSFTDmO9eXYv0ACOlMSw.ZdftNg.1Gsi8Fc3h87UkR9pl6V94HiEaHI
+
+
+2024-02-23 01:56:22,644 - app - DEBUG - Body: b''
+2024-02-23 01:56:22,799 - app - DEBUG - Response status: 200 OK
+2024-02-23 01:59:33,561 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOwiAQRc_irLugVop06zVMCIWhoVQwSLug6d2d6EZXf_HevMwOZs0ZY1Eb5hGGHZS3MEDPregk9lcpuBPSys5qLi4WGjApzuuki09RPdNCsqkY9HxfWcs4CT46H33xGypdkfhEiLm-LrRnLh_fCf_qT-pTEnA04BDtqE0gckv0pyknunqZlKnbsuMNLgE9pg.ZdftNg.PU_DSKpQPm53ik8AHu9Ov72rgCE
+
+
+2024-02-23 01:59:33,561 - app - DEBUG - Body: b''
+2024-02-23 01:59:33,940 - app - DEBUG - Response status: 200 OK
+2024-02-23 02:01:11,375 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOgjAQRa-is2ZRxFLL1muYNENbzAC2pBZMINzdia7YTfLff382sHNKPmSz-NRCs4EhBw3U0qlK-_qmleyUdrpyKNVVQAE2hn5-YqYYzBRHhqe4fnDE_jGLUkhGKHQUKNPiDa6eCbK4cnqR-sQ7r_85HMmD66dSsBfQee9atANn98iv2nzm3tvGxOJS7F8VLD9M.Zdft9Q._RPCAZVkgzUZZXBhp1zb9vjAejI
+
+
+2024-02-23 02:01:11,375 - app - DEBUG - Body: b''
+2024-02-23 02:01:11,768 - app - DEBUG - Response status: 200 OK
+2024-02-23 02:01:25,517 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 13
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjkEOgjAQRc_irFkUsNSy9RomTWkHU8CW1BZUwt2dhIVx9Sd5b37-BibHiD6pBWMH7QbKWWih4VbUEpuLFLwX0sraai7OFRRggh_yXScXvJrDRPL6tnpAQs73zrvkFlT6g0Ret8wqLqOZjuNxxPjv_lpWTULJBOwF9Ii202YkdA200aQTvT1NiNRcsv0LTH08qA.ZdfuVw.EIljgPa9DswhvJuxiG4LLJaWN3A
+
+
+2024-02-23 02:01:25,517 - app - DEBUG - Body: b'option=wydaje'
+2024-02-23 02:01:25,518 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 02:01:25,525 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVj90OwiAMhZ_FXu9iPzJkt76GCWFQDNsEw2BTl727LDNRr9rmO-e0XUA671EGLuw4o4cG5qcSHUIGMiZiA5_Qt9AswI1KuCaKVgzrE6NEU6ZYpQShx3IzONvFqwjGWX53w2-WsdpYE8yEXLwwkccl5iVhXg57c9tL_6_9pswiCYqcwpqBRlStkH1C5_36w2Yb-ecXaIKPmMGY5rSrKNY32E1Mkw.ZdfuZQ.bgrGP9yjd0WIM6Kfnbsg6SBOWKA
+
+
+2024-02-23 02:01:25,525 - app - DEBUG - Body: b''
+2024-02-23 02:01:26,039 - app - DEBUG - Response status: 200 OK
+2024-02-23 02:01:28,661 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:5000
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxVjsEOgjAQRL_FPXOgklLK1d8wacp20RVtTSkcJPy7a0xMPM3hzbzMBrjkTLG4lfIA_QaOA_TQ6mAaS21njR6NDbYJXpu2gwowxdty8YVTdM90lzJe8bzUSlmhHEeOXHgl518kkOci8Kjt4xvTf-lnYPo4agN7BSNRGDxOQk5J7mE5yGrGlMWo1P4G3r46XA.ZdfuZg.MZjRiyOxVK7MdcMjQXgGxoPLrwg
+
+
+2024-02-23 02:01:28,661 - app - DEBUG - Body: b'option=chc%C4%99'
+2024-02-23 02:01:28,662 - app - DEBUG - Response status: 302 FOUND
+2024-02-23 02:01:28,668 - app - DEBUG - Headers: Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Referer: http://localhost:5000/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,az;q=0.6
+Cookie: session=.eJxdj80KwjAQhJ_FPffQH9I0vfoaQkiTra7VRPJTwdJ3N6Ui6GlZvpnZ2QW08x51lMqGJ3roQV_0KZVVJaAAnTK0Uc7oB-gXkGSyomWGNwLbTnA2cmFEYxTjbbcZnL2ms4rkrHy4218c2ZEsRZpRqhdmSCFmWDNx38f0K_omEG4ZJYe1gBHRDEpPmRz37ofNFeTnE-ijT1hAyHu-UdXrG2U9So0.ZdfuaA.cg7LNrIc_dVEPNSrBve22pg29lU
+
+
+2024-02-23 02:01:28,669 - app - DEBUG - Body: b''
+2024-02-23 02:01:29,287 - app - DEBUG - Response status: 200 OK
