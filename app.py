@@ -90,7 +90,8 @@ def submit_answer():
     if is_correct:
         session['score'] = session.get('score', 0) + 1
     else:
-        session['score'] = session.get('score', 0)  # Keep score the same or handle it as needed
+        clear_results()
+        # session['score'] = session.get('score', 0)  # Keep score the same or handle it as needed
 
     return redirect(url_for('index'))
 
