@@ -1,10 +1,8 @@
 import logging
 import os
 import random
-import daemon
 from flask import Flask, request, render_template, session, redirect, url_for
 from database import db
-from db import fetch_data_from_mongo
 from daemon import DaemonContext
 
 reports_collection = db.reports
@@ -28,7 +26,6 @@ app = Flask(__name__)
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.DEBUG)
 
-app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 verbs_collection = db['verbs3']
@@ -168,11 +165,7 @@ def report_mistake():
 
 if __name__ == '__main__':
     try:
-        run_app()
+        with DaemonContext():
+            run_app()
     except Exception as e:
         logger.exception("Fatal error in main loop")
-
-# if __name__ == '__main__':
-#     CORS(app)
-#     load_data()
-#     app.run(host='0.0.0.0', port=5000)

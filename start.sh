@@ -48,6 +48,46 @@ pip install python-daemon pymongo
 info "Verifying installed packages..."
 pip list
 
-# Run the application
-info "Running the application..."
-python app.py
+# Function to start the daemon
+function start_daemon {
+    info "Starting the application as a daemon..."
+    nohup python app.py > logfile.log 2>&1 &
+    echo $! > app.pid
+    info "Application started with PID $(cat app.pid)"
+}
+
+# Function to stop the daemon
+function stop_daemon {
+    if [ -f app.pid ]; then
+        PID=$(cat app.pid)
+        info "Stopping the application with PID $PID..."
+        kill $PID
+        rm app.pid
+        info "Application stopped."
+    else
+        info "No PID file found. Is the application running?"
+    fi
+}
+
+# Function to restart the daemon
+function restart_daemon {
+    stop_daemon
+    start_daemon
+}
+
+# Check command line arguments
+case "$1" in
+    start)
+        start_daemon
+        ;;
+    stop)
+        stop_daemon
+        ;;
+    restart)
+        restart_daemon
+        ;;
+    *)
+        info "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
